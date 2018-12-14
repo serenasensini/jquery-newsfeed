@@ -12,10 +12,10 @@ $(function () {
         dataType : 'json',
         success  : function (data) {
             $(".news").empty();
-            if (data.status == "ok" & data.totalResults > 0) {
+            if (data.status == "ok" && data.totalResults > 0) {
                 console.log("https://newsapi.org/v2/top-headlines?apiKey=YOUR_KEY&q="+topic+"&sources="+sources);
 
-                counter = 0;
+                var counter = 0;
 
                 $.each(data.articles, function (i, e) {
                     if(counter < max_articles){
